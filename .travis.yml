@@ -10,6 +10,8 @@ jobs:
     - python: "3.4"
       script: python -m unittest discover python3
     - python: "3.5"
+      script: python -m unittest discover python3
     - python: "3.6"
+      script: python -m unittest discover python3
     - stage: deploy
       script: echo run once!
