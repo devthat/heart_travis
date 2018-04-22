@@ -13,10 +13,10 @@ jobs:
       script: python -m unittest discover python3
     - python: "3.6"
       script: python -m unittest discover python3
-    - stage: deploy
-      script: "deploying to pypi"
+    - stage: release
+      script: skip
       deploy:
-      - provider: pypi
+        provider: pypi
         user: norcuni
         server: https://test.pypi.org/legacy/
         password:
