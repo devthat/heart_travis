@@ -11,10 +11,13 @@ matrix:
 
 script: python -m unittest discover $TEST_SUITE
 
-jobs:
-  include:
-    - stage: deploy
-      script: echo deploy once!
+deploy:
+  script: echo deploy once!
+
+#jobs:
+#  include:
+#    - stage: deploy
+#      script: echo deploy once!
       # Keep in mind to overwrite these here
 #      rvm: 2.3
 #      env: FOO=foo
