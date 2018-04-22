@@ -1,3 +1,6 @@
+sudo: false
+dist: trusty
+
 language: python
 matrix:
   include:
@@ -6,7 +9,7 @@ matrix:
   - python: "3.5"
     env: TEST_SUITE=python3
 
-script: echo testing $TEST_SUITE
+script: python -m unittest discover $TEST_SUITE
 
 jobs:
   include:
