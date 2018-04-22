@@ -2,30 +2,14 @@ sudo: false
 dist: trusty
 
 language: python
-#matrix:
-#  include:
-#  - python: "2.7"
-#    env: TEST_SUITE=python2
-#  - python: "3.5"
-#    env: TEST_SUITE=python3
-
-#script: python -m unittest discover $TEST_SUITE
-#
-#deploy:
-#  script: echo deploy once!
-#jobs:
-#  include:
-#    - stage: deploy
-#      script: echo deploy once!
-      # Keep in mind to overwrite these here
-#      rvm: 2.3
-#      env: FOO=foo
 
 jobs:
   include:
     - python: "2.7"
       script: python -m unittest discover python2
-    - python: "3.5"
+    - python: "3.4"
       script: python -m unittest discover python3
+    - python: "3.5"
+    - python: "3.6"
     - stage: deploy
       script: echo run once!
