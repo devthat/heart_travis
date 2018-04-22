@@ -1,0 +1,17 @@
+language: python
+matrix:
+  include:
+  - python: "2.7"
+    env: TEST_SUITE=python2
+  - python: "3.5"
+    env: TEST_SUITE=python3
+
+script: echo testing $TEST_SUITE
+
+jobs:
+  include:
+    - stage: deploy
+      script: echo deploy once!
+      # Keep in mind to overwrite these here
+#      rvm: 2.3
+#      env: FOO=foo
